@@ -1,7 +1,8 @@
 import React, {createContext, useState, useEffect} from "react";
 import axios from 'axios';
+import PropTypes from 'prop-types';
 
-// Creación de context
+// CreaciÃ³n de context
 export const CategoriasContext = createContext();
 
 // Provides es donde se encuentran las funciones y state
@@ -28,6 +29,10 @@ const CategoriasProvider = (props) => {
      {props.children}
    </CategoriasContext.Provider>
   )
+};
+
+CategoriasProvider.propTypes = {
+  props: PropTypes.object
 };
 
 export default CategoriasProvider;
